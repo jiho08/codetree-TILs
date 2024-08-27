@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <unordered_set>
-#include <algorithm>
 using namespace std;
 
 int main()
@@ -11,10 +10,13 @@ int main()
 	getline(cin, a);
 	getline(cin, b);
 
-	a.erase(find(a.begin(), a.end(), ' '));
-	b.erase(find(b.begin(), b.end(), ' '));
+	for (int i = 0; i < a.size(); ++i)
+		if (a[i] != ' ')
+			cout << a[i];
 
-	cout << a << b;
+	for (int i = 0; i < b.size(); ++i)
+		if (b[i] != ' ')
+			cout << b[i];
 
 	return 0;
 }
